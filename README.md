@@ -67,12 +67,12 @@ java \
 	-Dlog.level=ALL \
 	-noverify \
 	-Xmx1G \
-	-jar ./plugins/org.eclipse.equinox.launcher_1.5.200.v20180922-1751.jar \
-	-configuration ./config_linux \
-	-data /path/to/data \
 	--add-modules=ALL-SYSTEM \
 	--add-opens java.base/java.util=ALL-UNNAMED \
-	--add-opens java.base/java.lang=ALL-UNNAMED
+	--add-opens java.base/java.lang=ALL-UNNAMED \
+	-jar ./plugins/org.eclipse.equinox.launcher_1.5.200.v20180922-1751.jar \
+	-configuration ./config_linux \
+	-data /path/to/data
 ```
 
 1. Choose a value for `-configuration`: this is the path to your platform's configuration directory. For Linux, use `./config_linux`. For windows, use `./config_win`. For mac/OS X, use `./config_mac`.
